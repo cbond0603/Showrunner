@@ -28,6 +28,13 @@ class ListViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! DetailViewController
+        let selectedIndexPath = tableView.indexPathForSelectedRow!
+        destination.show = shows.showArray[selectedIndexPath.row].show
+        
+    }
+    
     @IBAction func segmentPressed(_ sender: UISegmentedControl) {
     }
     
@@ -46,7 +53,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.detailTextLabel?.text = "\(rating)"
         } else {
             cell.detailTextLabel?.text = "-"
-
         }
         return cell
     }
