@@ -14,7 +14,7 @@ class Shows {
 
     var showArray: [Returned] = []
 
-    var urlString = "https://api.tvmaze.com/search/shows?q=alien"
+    var urlString = "https://api.tvmaze.com/search/shows?q="
 
     func getData(completed: @escaping () -> ()) {        
         print("🕸🕸 We are accessing the url \(urlString)")

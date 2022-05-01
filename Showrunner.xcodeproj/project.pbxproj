@@ -16,6 +16,7 @@
 		935447DC281DEE7200AEBBA4 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935447DB281DEE7200AEBBA4 /* Shows.swift */; };
 		935447DE281EE35D00AEBBA4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935447DD281EE35D00AEBBA4 /* DetailViewController.swift */; };
 		935447E0281EE98500AEBBA4 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935447DF281EE98500AEBBA4 /* Show.swift */; };
+		935447E2281EF6EC00AEBBA4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935447E1281EF6EC00AEBBA4 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		935447DB281DEE7200AEBBA4 /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
 		935447DD281EE35D00AEBBA4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		935447DF281EE98500AEBBA4 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		935447E1281EF6EC00AEBBA4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				935447DF281EE98500AEBBA4 /* Show.swift */,
 				935447CB281DEE5700AEBBA4 /* ListViewController.swift */,
 				935447DD281EE35D00AEBBA4 /* DetailViewController.swift */,
+				935447E1281EF6EC00AEBBA4 /* SearchViewController.swift */,
 				935447CD281DEE5700AEBBA4 /* Main.storyboard */,
 				935447D0281DEE5B00AEBBA4 /* Assets.xcassets */,
 				935447D2281DEE5B00AEBBA4 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				935447E0281EE98500AEBBA4 /* Show.swift in Sources */,
+				935447E2281EF6EC00AEBBA4 /* SearchViewController.swift in Sources */,
 				935447CC281DEE5700AEBBA4 /* ListViewController.swift in Sources */,
 				935447C8281DEE5700AEBBA4 /* AppDelegate.swift in Sources */,
 				935447DE281EE35D00AEBBA4 /* DetailViewController.swift in Sources */,

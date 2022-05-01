@@ -13,18 +13,19 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var shows = Shows()
+    var searchText = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        shows.urlString = "\(shows.urlString+searchText)"
         
         shows.getData {
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self.sortTable()
             }
-
         }
     }
     
@@ -32,13 +33,24 @@ class ListViewController: UIViewController {
         let destination = segue.destination as! DetailViewController
         let selectedIndexPath = tableView.indexPathForSelectedRow!
         destination.show = shows.showArray[selectedIndexPath.row].show
-        
+    }
+    
+    func sortTable() {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            shows.showArray.sort(by: {$0.show.name < $1.show.name})
+        case 1:
+            shows.showArray.sort(by: {$0.show.rating?.average ?? 0.0 > $1.show.rating?.average ?? 0.0})
+
+        default:
+            print("ERROR: this should never happen")
+        }
+        tableView.reloadData()
     }
     
     @IBAction func segmentPressed(_ sender: UISegmentedControl) {
+        sortTable()
     }
-    
-
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
